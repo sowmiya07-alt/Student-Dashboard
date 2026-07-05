@@ -29,23 +29,40 @@ function Attendance() {
     }
   };
 
-    if (loading) {
-  return (
-    <div className="loading">
-      Loading Attendance...
-    </div>
-  );
-}
+  if (loading) {
+    return (
+      <div className="loading">
+        Loading Attendance...
+      </div>
+    );
+  }
+
   return (
     <div className="container">
-      <h2 className="title">Attendance</h2>
+      <h1 className="title">📅 Attendance</h1>
+      <p className="subtitle">Attendance Overview</p>
 
-      {attendance.map((item, index) => (
-        <div className="card" key={index}>
-          <h3>{item.subject}</h3>
-          <p><strong>Attendance:</strong> {item.percentage}</p>
-        </div>
-      ))}
+      <div className="dashboard-grid">
+        {attendance.map((item, index) => (
+          <div className="card" key={index}>
+
+            <div className="icon">📅</div>
+
+            <h2>{item.subject}</h2>
+
+            <div className="number">
+              {item.percentage}
+            </div>
+
+            <span>Current Attendance</span>
+
+            <div className="progress">
+              <div style={{ width: item.percentage }}></div>
+            </div>
+
+          </div>
+        ))}
+      </div>
     </div>
   );
 }

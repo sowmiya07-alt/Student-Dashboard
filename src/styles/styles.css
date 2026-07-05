@@ -38,9 +38,9 @@ body{
 
 .dashboard-grid{
     display:grid;
-    grid-template-columns:1fr;
-    gap:30px;
-    margin-top:20px;
+    grid-template-columns:repeat(2, 1fr);
+    gap:25px;
+    margin-top:35px;
 }
 
 .card{
@@ -92,8 +92,9 @@ body{
 }
 
 .number{
-    font-size:54px;
+    font-size:35px;
     font-weight:700;
+    color:#fff
 }
 
 .card span{

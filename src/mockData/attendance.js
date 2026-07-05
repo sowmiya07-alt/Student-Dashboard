@@ -9,6 +9,9 @@ const attendance = [
   },{
     subject: "Database",
     percentage: "89%"
+    },{
+      subject: "Data Structures",
+      percentage: "91%"
     }
 ];
 

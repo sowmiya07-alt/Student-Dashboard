@@ -28,25 +28,44 @@ function Notifications() {
       }, 500);
     }
   };
-    if (loading) {
-  return (
-    <div className="loading-container">
-      <div className="loading">
-        Loading Notifications...
+
+  if (loading) {
+    return (
+      <div className="loading-container">
+        <div className="spinner"></div>
+        <p className="loading">Loading Notifications...</p>
       </div>
-    </div>
-  );
-}
+    );
+  }
 
   return (
     <div className="container">
-      <h2 className="title">Notifications</h2>
 
-      {notifications.map((notification) => (
-        <div className="card" key={notification.id}>
-          <p>{notification.message}</p>
-        </div>
-      ))}
+      <h1 className="title">🔔 Notifications</h1>
+      <p className="subtitle">
+        Latest Updates & Announcements
+      </p>
+
+      <div className="dashboard-grid">
+
+        {notifications.map((notification) => (
+          <div className="card" key={notification.id}>
+
+            <div className="icon">🔔</div>
+
+            <h2>Notification</h2>
+
+            <span>{notification.message}</span>
+
+            <div className="progress">
+              <div style={{ width: "100%" }}></div>
+            </div>
+
+          </div>
+        ))}
+
+      </div>
+
     </div>
   );
 }

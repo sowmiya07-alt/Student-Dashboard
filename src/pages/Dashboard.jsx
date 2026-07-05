@@ -30,30 +30,66 @@ function Dashboard() {
   };
 
   if (loading) {
-  return (
-    <div className="loading">
-      Loading Dashboard...
-    </div>
-  );
-}
+    return (
+      <div className="loading-container">
+        <div className="spinner"></div>
+        <p className="loading">Loading Dashboard...</p>
+      </div>
+    );
+  }
+
   return (
     <div className="container">
-      <h2 className="title">Dashboard</h2>
 
-      <div className="card">
-        <h3>Total Students</h3>
-        <p>{dashboard.totalStudents}</p>
+      <h1 className="title">👋 Welcome Back</h1>
+      <p className="subtitle">
+        Student Dashboard Overview
+      </p>
+
+      <div className="dashboard-grid">
+
+        <div className="card">
+          <div className="icon">👨‍🎓</div>
+          <h2>Total Students</h2>
+          <div className="number">{dashboard.totalStudents}</div>
+          <span>Registered Students</span>
+          <div className="progress">
+            <div style={{ width: "90%" }}></div>
+          </div>
+        </div>
+
+        <div className="card">
+          <div className="icon">📚</div>
+          <h2>Total Courses</h2>
+          <div className="number">{dashboard.totalCourses}</div>
+          <span>Courses Available</span>
+          <div className="progress">
+            <div style={{ width: "70%" }}></div>
+          </div>
+        </div>
+
+        <div className="card">
+          <div className="icon">📅</div>
+          <h2>Attendance</h2>
+          <div className="number">{dashboard.attendance}</div>
+          <span>Current Attendance</span>
+          <div className="progress">
+            <div style={{ width: dashboard.attendance }}></div>
+          </div>
+        </div>
+
+        <div className="card">
+          <div className="icon">🔔</div>
+          <h2>Notifications</h2>
+          <div className="number">5</div>
+          <span>Unread Notifications</span>
+          <div className="progress">
+            <div style={{ width: "55%" }}></div>
+          </div>
+        </div>
+
       </div>
 
-      <div className="card">
-        <h3>Total Courses</h3>
-        <p>{dashboard.totalCourses}</p>
-      </div>
-
-      <div className="card">
-        <h3>Attendance</h3>
-        <p>{dashboard.attendance}</p>
-      </div>
     </div>
   );
 }
