@@ -6,9 +6,11 @@
 
 .sidebar{
     width:240px;
+    min-width:240px;
     background:linear-gradient(180deg,#0F172A,#1E293B);
     padding:30px 20px;
     box-shadow:5px 0 20px rgba(0,0,0,.35);
+    transition:0.3s;
 }
 
 .logo{
@@ -38,4 +40,37 @@
     background:#2563EB;
     color:white;
     transform:translateX(8px);
+}
+
+/* Mobile Responsive */
+@media (max-width:768px){
+
+    .app{
+        flex-direction:column;
+    }
+
+    .sidebar{
+        width:100%;
+        min-width:100%;
+        padding:20px;
+    }
+
+    .logo{
+        margin-bottom:20px;
+        font-size:24px;
+    }
+
+    .menu{
+        flex-direction:row;
+        overflow-x:auto;
+        gap:10px;
+        padding-bottom:10px;
+    }
+
+    .menu a{
+        white-space:nowrap;
+        padding:10px 15px;
+        font-size:14px;
+    }
+
 }
