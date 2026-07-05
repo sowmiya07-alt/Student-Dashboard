@@ -1,0 +1,8 @@
+.main-content{
+    flex:1;
+    margin-left:260px;
+    min-height:100vh;
+    width:auto;
+    padding:45px;
+    overflow-x:hidden;
+}

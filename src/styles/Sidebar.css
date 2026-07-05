@@ -1,0 +1,41 @@
+.app{
+    display:flex;
+    min-height:100vh;
+    background:#0F172A;
+}
+
+.sidebar{
+    width:240px;
+    background:linear-gradient(180deg,#0F172A,#1E293B);
+    padding:30px 20px;
+    box-shadow:5px 0 20px rgba(0,0,0,.35);
+}
+
+.logo{
+    font-size:28px;
+    font-weight:700;
+    color:#38BDF8;
+    margin-bottom:40px;
+    text-align:center;
+}
+
+.menu{
+    display:flex;
+    flex-direction:column;
+    gap:15px;
+}
+
+.menu a{
+    color:#CBD5E1;
+    text-decoration:none;
+    padding:14px 18px;
+    border-radius:12px;
+    font-weight:600;
+    transition:.3s;
+}
+
+.menu a:hover{
+    background:#2563EB;
+    color:white;
+    transform:translateX(8px);
+}
